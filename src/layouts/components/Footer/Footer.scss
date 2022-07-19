@@ -1,0 +1,202 @@
+@import "../../../App.scss";
+
+.footer_wrap {
+    background-color: $primary_color;
+    .background {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+        position: relative;
+
+        .img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .map {
+            width: 100%;
+            height: 500px;
+        }
+
+        .contact_cricle {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translateX(50%) translateY(-50%);
+            background-color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 420px;
+            width: 420px;
+            border-radius: 50%;
+
+            .icon_map {
+                color: $primary_color;
+                font-size: 4rem;
+                line-height: 4rem;
+                margin: 0px 0px 11px;
+                text-align: center;
+            }
+
+            h3 {
+                color: #262626;
+                font-size: 2.4rem;
+                font-weight: 700;
+                margin: 0px 0px 12px;
+                text-align: center;
+            }
+
+            h4 {
+                color: #666666;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin: 0px 0px 20px;
+                text-align: center;
+            }
+
+            & > p {
+                border-color: #cccccc;
+                border-style: solid none;
+                border-width: 1px 0px;
+                color: #666666;
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 26px;
+                margin: 0px 0px 12px;
+                padding: 12px 0px 13px;
+                text-align: center;
+            }
+
+            .phone_text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $primary_color;
+                font-weight: 600;
+                line-height: 2.6rem;
+                text-align: center;
+
+                .icon {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1170px;
+        margin: 0 auto;
+
+        p {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 2.6rem;
+            margin: 7px 0px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        li {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+
+                .icon {
+                    height: 36px;
+                    width: 36px;
+                    padding: 6px;
+                    font-weight: 300;
+                    line-height: 3.6rem;
+                    border-radius: 100%;
+                    text-align: center;
+                    color: $primary_color;
+                    background-color: $white_color;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        color: $white_color;
+                        background-color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+    .footer_wrap {
+        .background {
+            .img,
+            .map {
+                height: 300px;
+            }
+
+            .contact_cricle {
+                height: 260px;
+                width: 260px;
+
+                .icon_map {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    margin: 0px 0px 11px;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    margin: 0px 0px 12px;
+                }
+
+                h4 {
+                    font-size: 1.6rem;
+                    margin: 0px 0px 20px;
+                }
+
+                & > p {
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    margin: 0px 0px 12px;
+                }
+
+                .phone_text {
+                    font-size: 1.4rem;
+
+                    .icon {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 600px) {
+    .footer_wrap {
+        .footer {
+            flex-direction: column;
+
+            ul {
+                margin: 10px;
+            }
+        }
+    }
+}

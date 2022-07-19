@@ -1,0 +1,18 @@
+@import "../../App.scss";
+
+.auth_wrap {
+    background-image: url(../../assets/images/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

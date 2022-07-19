@@ -1,0 +1,147 @@
+@import "../../App.scss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slider {
+    margin-top: $height_navbar;
+    position: relative;
+    height: 480px;
+
+    .wide {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &_text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        h2 {
+            margin: 200px 0px 0px;
+            padding: 0;
+            font-size: 3.4rem;
+            line-height: 3.4rem;
+            color: $white_color;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 12px 0;
+            padding: 0;
+            font-size: 7rem;
+            font-weight: 700;
+            line-height: 7rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            font-weight: 400;
+            max-width: 770px;
+            color: #fff;
+        }
+    }
+}
+
+// Custom react slick slider
+.slick-arrow {
+    z-index: 10;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-arrow {
+    right: 20px;
+}
+
+.slick-dots {
+    bottom: 25px;
+
+    & li button:before {
+        font-size: 1.2rem;
+    }
+
+    & li.slick-active button:before {
+        opacity: 1;
+        color: $primary_color;
+    }
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+    .slider {
+        height: 400px;
+        .wide {
+            width: 600px;
+        }
+        &_text {
+            h2 {
+                margin: 100px 0px 0px;
+                font-size: 3rem;
+            }
+
+            h1 {
+                font-size: 6rem;
+
+                line-height: 6rem;
+            }
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 600px) {
+    .slider {
+        height: 200px;
+        .wide {
+            width: 90%;
+        }
+        &_text {
+            h2 {
+                margin: 36px 0px 0px;
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+                margin: 0;
+            }
+            p {
+                display: none;
+                font-size: 1.2rem;
+            }
+
+            a {
+                padding: 4px;
+                margin: 0;
+                margin-top: 6px;
+            }
+        }
+    }
+}

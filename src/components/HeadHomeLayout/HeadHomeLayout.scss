@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.header_home_layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 75px;
+    margin-bottom: 40px;
+
+    h1 {
+        color: $text_color;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+        margin: 0px 0px 20px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    h3 {
+        color: #666666;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2.6rem;
+        margin: 0px 0px 17px;
+        text-align: center;
+    }
+
+    .icon_wrap {
+        position: relative;
+        .icon {
+            color: $text_color;
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 150%;
+            bottom: 16px;
+            width: 150px;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 150%;
+            bottom: 16px;
+            width: 150px;
+            height: 1px;
+            background-color: #ccc;
+        }
+    }
+
+    &.whiteColor {
+        h1,
+        h3 {
+            color: $white_color;
+        }
+
+        .icon_wrap {
+            .icon {
+                color: $white_color;
+            }
+
+            &::before,
+            &::after {
+                background-color: $white_color;
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@import "../../App.scss";
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 9px 16px;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: $white_color;
+    border: 1px solid transparent;
+    user-select: none;
+    text-decoration: none;
+    transition: all 0.15s linear;
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    // + .btn {
+    //     margin-left: 8px;
+    // }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// Button types
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.outline {
+    color: $white_color;
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.primary {
+    &:hover {
+        border-color: $primary_color;
+        background-color: $primary_color;
+    }
+}
+
+.header_btn {
+    padding: 4px 0px;
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.custom {
+    border-radius: 0;
+    border: 1px solid $white_color;
+    color: $white_color;
+    background-color: $primary_color;
+    line-height: 2rem;
+
+    .title {
+        font-weight: 300;
+    }
+
+    &:hover {
+        color: $text_color;
+        background-color: $white_color;
+        border-color: $white_color;
+    }
+}
+
+.subscribe_btn {
+    height: 100%;
+    border-radius: 0;
+    background-color: $primary_color;
+    padding: 0 30px;
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 2rem !important;
+        font-weight: 400 !important;
+        line-height: 2.6rem;
+    }
+
+    .icon_right {
+        font-size: 2.4rem;
+        color: #fff;
+        margin-left: 6px;
+    }
+
+    &:hover {
+        background-color: $text_color;
+    }
+}
+
+.submit_mess {
+    height: 48px !important;
+    float: right;
+
+    span {
+        font-size: 1.4rem !important;
+    }
+}
+
+// Button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}

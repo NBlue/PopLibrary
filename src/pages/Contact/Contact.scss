@@ -1,0 +1,173 @@
+@import "../../App.scss";
+
+.contact_page {
+    margin-top: $height_navbar;
+
+    .content {
+        max-width: 1170px;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 30px;
+
+        .input_wrap {
+            padding-bottom: 50px;
+
+            .info {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 30px;
+                padding-top: 12px;
+            }
+            .input_text-wrap {
+                position: relative;
+                width: 100%;
+                label {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    background-color: #fff;
+                    color: #666;
+                    font-size: 1.5rem;
+                    line-height: 2.6rem;
+                    text-align: center;
+                    padding: 0 24px;
+                }
+
+                .input_fild {
+                    width: 100%;
+                    background-color: $white_color;
+                    border: 1px solid #ccc;
+                    border-radius: 2px;
+                    color: #666;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    line-height: 2.6rem;
+                    margin: 0px 0px 30px;
+                    padding: 6px 10px;
+                    outline: none;
+
+                    &:hover,
+                    &:focus {
+                        border-color: $primary_color;
+                    }
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 300px;
+                resize: none;
+                padding: 6px 10px;
+                outline: none;
+                border: 1px solid #ccc;
+                color: #666;
+                font-size: 1.5rem;
+                font-weight: 300;
+                line-height: 2.6rem;
+                border-radius: 2px;
+                margin-bottom: 20px;
+
+                &:hover,
+                &:focus {
+                    border-color: $primary_color;
+                }
+            }
+        }
+
+        .contact_wrap {
+            .title {
+                margin-bottom: 60px;
+
+                h1 {
+                    color: #4a4750;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 20px;
+                    margin: 0px 0px 20px;
+                    padding: 0px 0px 20px;
+                    text-transform: uppercase;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        width: 70px;
+                        border-top: 1px solid #4a4750;
+                    }
+                }
+
+                p {
+                    color: #666;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    line-height: 2.6rem;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 6px 0;
+
+                        .icon {
+                            height: 20px;
+                            width: 20px;
+                            margin-right: 8px;
+                            color: $primary_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+    .contact_page {
+        .content {
+            padding: 0 12px;
+            display: block;
+
+            .input_wrap {
+                textarea {
+                    height: 200px;
+                }
+            }
+
+            .contact_wrap {
+                margin: 30px 0 60px;
+                .title {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 600px) {
+    .contact_page {
+        .content {
+            .input_wrap {
+                .info {
+                    grid-template-columns: 1fr;
+                }
+
+                textarea {
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

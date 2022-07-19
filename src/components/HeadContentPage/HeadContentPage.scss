@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+.HeadContentPage_wrap {
+    background-image: url(../../assets/images/background-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 170px;
+    padding-top: 70px;
+
+    h1 {
+        font-size: 2.4rem;
+        color: $white_color;
+        text-transform: uppercase;
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+    }
+
+    p {
+        color: $white_color;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2.6rem;
+        text-align: center;
+
+        span {
+            padding: 0 8px;
+        }
+    }
+}

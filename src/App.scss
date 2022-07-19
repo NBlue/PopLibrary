@@ -1,0 +1,68 @@
+@import "normalize.css";
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+}
+
+// Define variable
+$primary_color: #f6b93b;
+$secondary_color: #e58e26;
+$text_color: #666;
+$white_color: #fff;
+
+$height_navbar: 70px;
+
+// Animation
+
+@keyframes translateY {
+    from {
+        opacity: 0;
+        top: 130%;
+    }
+    to {
+        opacity: 1;
+        top: 110%;
+    }
+}
+
+@keyframes fadeOutButton {
+    from {
+        background-color: $primary_color;
+    }
+    to {
+        background-color: $secondary_color;
+    }
+}
+
+@keyframes opacityBtn {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

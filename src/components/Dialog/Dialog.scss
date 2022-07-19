@@ -1,0 +1,77 @@
+@import "../../App.scss";
+
+.dialog_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+
+    .dialog {
+        background-color: $white_color;
+        width: 500px;
+        border-radius: 6px;
+
+        &_header {
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+
+            h5 {
+                font-size: 2.4rem;
+                line-height: 3rem;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .icon {
+                color: #000;
+                font-size: 2.4rem;
+            }
+        }
+
+        &_body {
+            padding: 12px 20px;
+            border-bottom: 2px solid #f0f0f0;
+
+            p {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                font-weight: 400;
+                text-align: justify;
+            }
+        }
+
+        &_footer {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                font-size: 1.8rem;
+                line-height: 2rem;
+                font-weight: 500;
+                padding: 6px 40px;
+                color: #fff;
+                background-color: $primary_color;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.15s linear;
+
+                &:hover {
+                    background-color: $secondary_color;
+                }
+            }
+        }
+    }
+}
