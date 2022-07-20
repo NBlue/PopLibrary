@@ -27,7 +27,7 @@ const Home = () => {
         const typeBooks = [];
         const topPopular = request.get("books?top=6");
         config.typeBooks.forEach((typeBook, index) => {
-            typeBooks[index] = request.get("books?top=5");
+            typeBooks[index] = request.get(`books?type=${typeBook}`);
         });
 
         axios
@@ -39,7 +39,10 @@ const Home = () => {
                     });
                     let popularData = newData.pop();
 
-                    setTypeBooksData(newData);
+                    let TopData = newData.map((data) => {
+                        return data.slice(0, 5);
+                    });
+                    setTypeBooksData(TopData);
                     setPopularBooksData(popularData);
 
                     setLoading(false);

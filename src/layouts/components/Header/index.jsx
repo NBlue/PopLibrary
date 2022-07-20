@@ -186,7 +186,7 @@ const Header = () => {
                             <p>Contact Us</p>
                         </Link>
                         <Link
-                            to="/user/:123456"
+                            to={`/user/${userData._id}`}
                             className="action"
                             onClick={() => setShowMenu(false)}
                         >

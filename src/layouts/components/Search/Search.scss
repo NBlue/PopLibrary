@@ -121,6 +121,12 @@
             .input_search {
                 margin-right: 0;
                 margin-bottom: 12px;
+                border-radius: 0;
+            }
+
+            .search_button {
+                width: 100%;
+                border-radius: 0;
             }
         }
     }
